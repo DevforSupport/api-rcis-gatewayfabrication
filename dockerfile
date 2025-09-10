@@ -2,19 +2,16 @@ FROM node:21-alpine
 
 WORKDIR /usr/src/app
 
-RUN apk update && apk upgrade \
-    && apk add --no-cache postgresql-client bash
+RUN apk update && apk upgrade
 
 COPY package*.json ./
+
 RUN npm install
 
 COPY . .
 
+EXPOSE 3000
+# Compilar la app NestJS
 RUN npm run build
 
-COPY bootstrap.sh .
-RUN chmod +x bootstrap.sh
-
-EXPOSE 3000
-
-CMD ["./bootstrap.sh"]
+CMD ["npm", "run", "start:prod"]
