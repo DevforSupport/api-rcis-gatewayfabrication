@@ -2,7 +2,8 @@ FROM node:21-alpine
 
 WORKDIR /usr/src/app
 
-RUN apk update && apk upgrade
+RUN apk update && apk upgrade \
+    && apk add --no-cache postgresql-client bash
 
 COPY package*.json ./
 RUN npm install
