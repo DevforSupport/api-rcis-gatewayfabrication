@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Body, Controller, Get, Headers, Inject, Post } from '@nestjs/common';
 import { RcisService } from './rcis.service';
-import { CreateSolicitudCompraDto } from './dto/create-rci.dto';
+import { CreateRciDto } from './dto/create-rci.dto';
 
 @Controller('rcis')
 export class RcisController {
@@ -10,7 +10,7 @@ export class RcisController {
   @Post()
   async createUpdateRci(
     @Headers('x-api-key') apiKey: string,
-    @Body() payload: CreateSolicitudCompraDto,
+    @Body() payload: CreateRciDto,
   ) {
     if (apiKey !== process.env.API_KEY) {
       throw new Error('Invalid API Key');

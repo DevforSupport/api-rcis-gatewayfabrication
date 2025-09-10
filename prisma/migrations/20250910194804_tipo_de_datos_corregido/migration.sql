@@ -1,0 +1,77 @@
+/*
+  Warnings:
+
+  - You are about to drop the `solicitudes_compra` table. If the table is not empty, all the data it contains will be lost.
+
+*/
+-- DropTable
+DROP TABLE "public"."solicitudes_compra";
+
+-- CreateTable
+CREATE TABLE "public"."Rci" (
+    "id" INTEGER NOT NULL,
+    "start_time" TIMESTAMP(3),
+    "completion_time" TIMESTAMP(3),
+    "email" TEXT,
+    "name" TEXT,
+    "planta" TEXT,
+    "departamento" TEXT,
+    "departamento1" TEXT,
+    "cantidad_1" DOUBLE PRECISION,
+    "unidad_de_medida_1" TEXT,
+    "descripcion_del_articulo_1" TEXT,
+    "uso_1" TEXT,
+    "precio_unitario_1" DOUBLE PRECISION,
+    "proveedor_opcion_1_1" TEXT,
+    "quieres_agregar_otro_articulo" TEXT,
+    "precio_unitario_2" DOUBLE PRECISION,
+    "descripcion_del_articulo_2" TEXT,
+    "uso_2" TEXT,
+    "unidad_de_medida_2" TEXT,
+    "proveedor_opcion_1_2" TEXT,
+    "quieres_agregar_otro_articulo2" TEXT,
+    "descripcion_del_articulo_3" TEXT,
+    "unidad_de_medida_3" TEXT,
+    "uso_3" TEXT,
+    "precio_unitario_3" DOUBLE PRECISION,
+    "proveedor_opcion_1_3" TEXT,
+    "quieres_agregar_otro_articulo3" TEXT,
+    "uso_4" TEXT,
+    "unidad_de_medida_4" TEXT,
+    "descripcion_del_articulo_4" TEXT,
+    "precio_unitario_4" DOUBLE PRECISION,
+    "quieres_agregar_otro_articulo4" TEXT,
+    "proveedor_opcion_1_4" TEXT,
+    "cantidad_2" DOUBLE PRECISION,
+    "cantidad_3" DOUBLE PRECISION,
+    "cantidad_4" DOUBLE PRECISION,
+    "cantidad_5" DOUBLE PRECISION,
+    "descripcion_del_articulo_5" TEXT,
+    "precio_unitario_5" DOUBLE PRECISION,
+    "unidad_de_medida_5" TEXT,
+    "uso_5" TEXT,
+    "proveedor_opcion_1_5" TEXT,
+    "quieres_agregar_otro_articulo5" TEXT,
+    "costo_total_de_la_compra" DOUBLE PRECISION,
+    "moneda" TEXT,
+    "concepto_de_gasto" TEXT,
+    "responsable_del_area" TEXT,
+    "tipo_de_rci" TEXT,
+    "adjuntar_cotizaciones2" TEXT,
+    "comentarios" TEXT,
+    "tipo_de_compra" TEXT,
+    "proveedor_opcion_2_1" TEXT,
+    "proveedor_opcion_3_1" TEXT,
+    "proveedor_opcion_2_2" TEXT,
+    "proveedor_opcion_3_2" TEXT,
+    "proveedor_opcion_2_3" TEXT,
+    "proveedor_opcion_3_3" TEXT,
+    "proveedor_opcion_2_4" TEXT,
+    "proveedor_opcion_3_4" TEXT,
+    "proveedor_opcion_2_5" TEXT,
+    "proveedor_opcion_3_5" TEXT,
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Rci_pkey" PRIMARY KEY ("id")
+);

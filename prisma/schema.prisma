@@ -14,67 +14,70 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model SolicitudCompra {
-  id                              Int       @id
-  hora_de_inicio                  DateTime?
-  hora_de_finalizacion            DateTime?
-  correo_electronico              String
-  nombre                          String
-  planta                          String?
-  departamento                    String?
-  tipo_de_compra                  String?
-  concepto_de_gasto               String?
-  tipo_de_rc                      String?
-  adjuntar_cotizaciones           String?
-  cantidad_1                      Int?
-  unidad_de_medida_1              String?
-  descripcion_del_articulo_1      String?
-  uso_1                           String?
-  precio_unitario_1               Float?
-  proveedor_opcion_1_1            String?
-  proveedor_opcion_2_1            String?
-  proveedor_opcion_3_1            String?
-  quieres_agregar_otro_articulo_1 String?
-  cantidad_2                      Int?
-  unidad_de_medida_2              String?
-  descripcion_del_articulo_2      String?
-  uso_2                           String?
-  precio_unitario_2               Float?
-  proveedor_opcion_1_2            String?
-  proveedor_opcion_2_2            String?
-  proveedor_opcion_3_2            String?
-  quieres_agregar_otro_articulo_2 String?
-  cantidad_3                      Int?
-  unidad_de_medida_3              String?
-  descripcion_del_articulo_3      String?
-  uso_3                           String?
-  precio_unitario_3               Float?
-  proveedor_opcion_1_3            String?
-  proveedor_opcion_2_3            String?
-  proveedor_opcion_3_3            String?
-  quieres_agregar_otro_articulo_3 String?
-  cantidad_4                      Int?
-  unidad_de_medida_4              String?
-  descripcion_del_articulo_4      String?
-  uso_4                           String?
-  precio_unitario_4               Float?
-  proveedor_opcion_1_4            String?
-  proveedor_opcion_2_4            String?
-  proveedor_opcion_3_4            String?
-  quieres_agregar_otro_articulo_4 String?
-  cantidad_5                      Int?
-  unidad_de_medida_5              String?
-  descripcion_del_articulo_5      String?
-  uso_5                           String?
-  precio_unitario_5               Float?
-  proveedor_opcion_1_5            String?
-  proveedor_opcion_2_5            String?
-  proveedor_opcion_3_5            String?
-  costo_total_de_la_compra        Float?
-  comentarios                     String?
+model Rci {
+  id                             Int       @id 
+  start_time                     DateTime?
+  completion_time                DateTime?
+  email                          String?
+  name                           String?
+  planta                         String?
+  departamento                   String?
+  departamento1                  String?
+  cantidad_1                     Float?
+  unidad_de_medida_1             String?
+  descripcion_del_articulo_1     String?
+  uso_1                          String?
+  precio_unitario_1              Float?
+  proveedor_opcion_1_1           String?
+  quieres_agregar_otro_articulo  String?
+  precio_unitario_2              Float?
+  descripcion_del_articulo_2     String?
+  uso_2                          String?
+  unidad_de_medida_2             String?
+  proveedor_opcion_1_2           String?
+  quieres_agregar_otro_articulo2 String?
+  descripcion_del_articulo_3     String?
+  unidad_de_medida_3             String?
+  uso_3                          String?
+  precio_unitario_3              Float?
+  proveedor_opcion_1_3           String?
+  quieres_agregar_otro_articulo3 String?
+  uso_4                          String?
+  unidad_de_medida_4             String?
+  descripcion_del_articulo_4     String?
+  precio_unitario_4              Float?
+  quieres_agregar_otro_articulo4 String?
+  proveedor_opcion_1_4           String?
+  cantidad_2                     Float?
+  cantidad_3                     Float?
+  cantidad_4                     Float?
+  cantidad_5                     Float?
+  descripcion_del_articulo_5     String?
+  precio_unitario_5              Float?
+  unidad_de_medida_5             String?
+  uso_5                          String?
+  proveedor_opcion_1_5           String?
+  quieres_agregar_otro_articulo5 String?
+  costo_total_de_la_compra       Float?
+  moneda                         String?
+  concepto_de_gasto              String?
+  responsable_del_area           String?
+  tipo_de_rci                    String?
+  adjuntar_cotizaciones2         String?
+  comentarios                    String?
+  tipo_de_compra                 String?
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  proveedor_opcion_2_1           String?
+  proveedor_opcion_3_1           String?
+  proveedor_opcion_2_2           String?
+  proveedor_opcion_3_2           String?
+  proveedor_opcion_2_3           String?
+  proveedor_opcion_3_3           String?
+  proveedor_opcion_2_4           String?
+  proveedor_opcion_3_4           String?
+  proveedor_opcion_2_5           String?
+  proveedor_opcion_3_5           String?
 
-  @@map("solicitudes_compra")
+  created_at                     DateTime  @default(now())
+  updated_at                     DateTime  @updatedAt
 }
