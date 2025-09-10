@@ -9,12 +9,11 @@ RUN npm install
 
 COPY . .
 
-# No generar Prisma ni migrar aquí
-# RUN npx prisma generate && npx prisma migrate deploy
-
 RUN npm run build
+
+COPY bootstrap.sh .
+RUN chmod +x bootstrap.sh
 
 EXPOSE 3000
 
-# Ejecutar Prisma en runtime
-CMD ["sh", "-c", "npx prisma generate && npx prisma migrate deploy && node dist/main.js"]
+CMD ["./bootstrap.sh"]
